@@ -110,7 +110,7 @@ RUN $PYENV_ROOT/plugins/python-build/bin/python-build $(pyenv latest -f -k 3.13)
 ENV PATH="${PATH}:/home/renovate/python3.13/bin"
 
 # Use rustup to install the latest Rust toolchain
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+RUN curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y
 
 WORKDIR /home/renovate/renovate
 
